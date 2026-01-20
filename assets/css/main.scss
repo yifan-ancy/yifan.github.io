@@ -7,6 +7,11 @@
  * Note that the files are processed in the order they are imported, so they are partly
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
+/* --- 自定义字体设置 --- */
+$sans-serif: "Quicksand", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+
+/* 如果你想让标题也变圆润 */
+$header-font-family: "Quicksand", sans-serif;
 
 @import
     "vendor/breakpoint/breakpoint",
