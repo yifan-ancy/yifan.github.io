@@ -51,7 +51,7 @@ $header-font-family: "Quicksand", sans-serif;
 
 html {
   /* 调整基础字体大小，默认通常是 16px 或 100%，改为 15px 会让全站整体缩小一点 */
-  font-size: 14px; 
+  font-size: 12px; 
 }
 
 body {
@@ -75,4 +75,46 @@ h3 { font-size: 1.2rem; }
 /* 针对你截图中的 Honors 和 Educations 列表缩小字号 */
 .page__content ul, .page__content ol {
   font-size: 0.9rem;
+}
+
+/* --- 蒋依帆的布局精调：侧边栏固定，内容区拓宽 --- */
+
+/* 1. 拓宽容器限制，让页面能铺得更开 */
+.archive, .page, .sidebar__right {
+  max-width: 1400px; /* 从默认的 1000px 左右大幅提升 */
+  margin-left: 5%;   /* 稍微留一点左边距，保持呼吸感 */
+  margin-right: 2%;  /* 极力缩小右边距，消除空白 */
+}
+
+/* 2. 锁定侧边栏宽度（根据你的截图效果，锁定在约 250px-300px 比较合适） */
+.sidebar {
+  width: 260px;      
+  padding-right: 20px;
+  float: left;
+}
+
+/* 3. 让主内容区占据剩下的几乎所有空间 */
+.page__content {
+  /* 使用 calc 自动计算：总宽度 - 侧边栏宽度 - 间距 */
+  width: calc(100% - 300px); 
+  padding-left: 40px; 
+  padding-right: 0;   /* 彻底消除内容区右侧的内边距 */
+  float: left;
+}
+
+/* 4. 强制覆盖某些布局带来的右侧 margin */
+.page {
+  padding-right: 0 !important;
+}
+
+/* 5. 确保在窄屏下能自动切换回单列，防止手机端显示问题 */
+@media (max-width: 800px) {
+  .archive, .page, .sidebar__right {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+  .sidebar, .page__content {
+    width: 100%;
+    padding: 0;
+  }
 }
