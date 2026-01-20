@@ -7,9 +7,20 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+👨‍🎓 Biography
+======
+I am currently an undergraduate student at the School of **Intelligence Science and Technology**, **Nanjing University (NJU)**.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+I am fortunate to have conducted research under the mentorship of **Prof. Beibei Wang**, **Prof. Jieqi Shi**, and **Prof. Wenbin Li** and coliberate with Senior **Yunkai Dang**. These inspiring experiences have instilled in me a rigorous scientific methodology and a persistent passion for exploring the frontiers of Artificial Intelligence.
+
+🔍 Research Interests
+======
+My research journey is driven by the goal of building intelligent agents with robust perception and reasoning capabilities:
+* **Embodied AI**: Interaction and decision-making in physical or simulated environments.
+* **Multimodal Large Models**
+* **Trustworthy AI**: Enhancing the reliability of large models through confidence calibration.
+* **Multimodal Large Models**: Currently, my research focuses on Brain-inspired Large Multimodal Models, aiming to bridge the gap between biological neural mechanisms and artificial intelligence. I am particularly interested in leveraging neuro-inspired architectures to enhance the efficiency and reasoning capabilities of foundation models. P
+
 
 A data-driven personal website
 ======
