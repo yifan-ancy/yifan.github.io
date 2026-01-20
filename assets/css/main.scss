@@ -47,74 +47,62 @@ $header-font-family: "Quicksand", sans-serif;
     "vendor/font-awesome/brands"
 ;
 
-/* --- 蒋依帆的专属字体微调 --- */
+/* --- 1. 字体微调：精准控制范围 --- */
 
 html {
-  /* 调整基础字体大小，默认通常是 16px 或 100%，改为 15px 会让全站整体缩小一点 */
-  font-size: 16px; 
+  font-size: 16px; /* 恢复基础字号，确保侧边栏正常 */
 }
 
-body {
-  /* 确保全局使用 Quicksand 字体 */
+/* 仅针对正文内容区缩小字体 */
+.page__main .page__content {
   font-family: "Quicksand", sans-serif;
-  /* 进一步细化正文文字大小 */
-  font-size: 0.95rem; 
-  line-height: 1.5; /* 缩小行间距，让内容更紧凑 */
+  font-size: 0.9rem;  /* 缩小正文字体 */
+  line-height: 1.6;   /* 适当的行高让小字号更易读 */
 }
 
-/* 针对标题进行微调，让它们不要太大，显得更精致 */
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.4rem; }
-h3 { font-size: 1.2rem; }
+/* 确保标题也相应缩小，保持精致感 */
+.page__content h1 { font-size: 1.6rem; }
+.page__content h2 { font-size: 1.3rem; }
+.page__content h3 { font-size: 1.1rem; }
 
-// /* 针对侧边栏（你的头像和个人信息部分）缩小字体 */
-// .sidebar {
-//   font-size: 0.85rem;
-// }
-
-/* 针对你截图中的 Honors 和 Educations 列表缩小字号 */
-.page__content ul, .page__content ol {
-  font-size: 0.9rem;
-}
-
-/* --- 蒋依帆的布局精调：侧边栏固定，内容区拓宽 --- */
-
-/* 1. 拓宽容器限制，让页面能铺得更开 */
-.archive, .page, .sidebar__right {
-  max-width: 1400px; /* 从默认的 1000px 左右大幅提升 */
-  margin-left: 5%;   /* 稍微留一点左边距，保持呼吸感 */
-  margin-right: 2%;  /* 极力缩小右边距，消除空白 */
-}
-
-/* 2. 锁定侧边栏宽度（根据你的截图效果，锁定在约 250px-300px 比较合适） */
+/* 明确锁定侧边栏字体：不跟随正文缩小 */
 .sidebar {
-  width: 260px;      
+  font-size: 1rem !important;
+}
+.author__name {
+  font-size: 1.15rem !important; /* 蒋依帆的名字可以稍微突出 */
+}
+
+
+/* --- 2. 布局微调：拓宽并整体右移 --- */
+
+.archive, .page, .sidebar__right {
+  max-width: 1350px;  /* 保持较大的总宽度，减少右侧空白 */
+  margin-left: 10%;   /* 【关键】增加左边距，实现整体向右移动 */
+  margin-right: auto;
+}
+
+/* 侧边栏保持固定宽度 */
+.sidebar {
+  width: 260px;
   padding-right: 20px;
   float: left;
 }
 
-/* 3. 让主内容区占据剩下的几乎所有空间 */
+/* 内容区占据剩余空间 */
 .page__content {
-  /* 使用 calc 自动计算：总宽度 - 侧边栏宽度 - 间距 */
-  width: calc(100% - 300px); 
+  width: calc(100% - 320px); 
   padding-left: 40px; 
-  padding-right: 0;   /* 彻底消除内容区右侧的内边距 */
+  padding-right: 0;
   float: left;
 }
 
-/* 4. 强制覆盖某些布局带来的右侧 margin */
-.page {
-  padding-right: 0 !important;
-}
 
-/* 5. 确保在窄屏下能自动切换回单列，防止手机端显示问题 */
+/* --- 3. 移动端适配：防止右移导致手机端错位 --- */
 @media (max-width: 800px) {
   .archive, .page, .sidebar__right {
+    margin-left: 0;
     max-width: 100%;
-    margin: 0 10px;
-  }
-  .sidebar, .page__content {
-    width: 100%;
-    padding: 0;
+    padding: 0 10px;
   }
 }
