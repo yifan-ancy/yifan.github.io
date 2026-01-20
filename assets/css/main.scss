@@ -106,3 +106,34 @@ html {
     padding: 0 10px;
   }
 }
+
+/* --- 专门调大侧边栏字体 --- */
+
+/* 1. 调大姓名（蒋依帆） */
+.author__name {
+  font-size: 1.3rem !important; /* 默认约 1.1rem，调大后更有辨识度 */
+  font-weight: 700;             /* 加粗一点 */
+  margin-bottom: 5px;
+}
+
+/* 2. 调大头像下方的简介（学院信息） */
+.author__bio {
+  font-size: 0.95rem !important; /* 保持适中，易于阅读 */
+  line-height: 1.4;
+  color: #555;                   /* 稍微加深颜色，显得稳重 */
+}
+
+/* 3. 调大下方社交链接和地理位置列表 */
+.author__urls-wrapper {
+  font-size: 1rem !important;   /* 让 Email、GitHub 等链接更清晰 */
+}
+
+.author__urls-wrapper button {
+  font-size: 1rem !important;
+}
+
+/* 4. 如果有侧边栏小标题（如 "Links"），也同步调大 */
+.sidebar .nav__title {
+  font-size: 1.1rem !important;
+  margin-top: 20px;
+}
